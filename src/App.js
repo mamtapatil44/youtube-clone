@@ -17,7 +17,7 @@ const routes = createBrowserRouter([{
       element:<MainContainer />
     },
     {
-      path:'/',
+      path:'/watch',
       element:<WatchPage />
     }
   ]
