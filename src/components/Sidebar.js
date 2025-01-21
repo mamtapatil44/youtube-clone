@@ -1,37 +1,45 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { PLAYLIST } from "../utils/constant";
+import React from 'react';
+import { FaHome, FaVideo, FaRegListAlt, FaHistory, FaMusic, FaFilm, FaTv } from 'react-icons/fa'; 
+
 
 const Sidebar = () => {
-  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
-
-  // Early Return pattern
-  if (!isMenuOpen) return null;
   return (
-    <div className="sticky top-0">
-      <ul className="my-4">
-        <li className="my-3">Home</li>
-        <li className="my-3">Shorts</li>
-        <li className="my-3">Subscriptions</li>
-      </ul>
-      <hr/>
-      <ul className="my-4">
-        <li className="my-3">Library</li>
-        <li className="my-4">History</li>
-        <li className="my-3">Subscriptions</li>
-      </ul>
-      <hr/>
-      <ul className="my-4">
-        <h1 className="my-3">Explore</h1>
-        <li className="my-3"> Trending</li>
-        <li className="my-3">Shopping</li>
-        <li className="my-3">Music</li>
-        <li className="my-3">  Movies</li>
-        <li className="my-3">Live</li>
-        <li className="my-3">Music</li>
+    <div className="sticky top-0 bg-black p-2 sm:w-60 md:w-72 lg:w-80 h-full overflow-y-auto">
+      <ul className="my-4 space-y-3">
+        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
+          <FaHome className="w-6 h-6 mr-2" />
+          <span className="hidden lg:block">Home</span> 
+        </li>
+        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
+          <FaVideo className="w-6 h-6 mr-2" />
+          <span className="hidden lg:block">Shorts</span>
+        </li>
+        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
+          <FaRegListAlt className="w-6 h-6 mr-2" />
+          <span className="hidden lg:block">Library</span>
+        </li>
+        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
+          <FaHistory className="w-6 h-6 mr-2" />
+          <span className="hidden lg:block">History</span>
+        </li>
+        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
+          <FaMusic className="w-6 h-6 mr-2" />
+          <span className="hidden lg:block">Music</span>
+        </li>
+        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
+          <FaFilm className="w-6 h-6 mr-2" />
+          <span className="hidden lg:block">Movies</span>
+        </li>
+        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
+          <FaTv className="w-6 h-6 mr-2" />
+          <span className="hidden lg:block">Live</span>
+        </li>
       </ul>
     </div>
   );
 };
 
+
 export default Sidebar;
+
+

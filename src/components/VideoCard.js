@@ -5,18 +5,22 @@ const VideoCard = ({ info }) => {
   const { channelTitle, title, thumbnails } = snippet;
 
   return (
-   
-    <div className="p-2 m-2 w-72 h-96 shadow-lg">
-      <img className="rounded-lg" alt="thumbnail" src={thumbnails.medium.url} />
-      <ul>
-        <li className="font-bold py-2">{title}</li>
-        <li>{channelTitle}</li>
-        <li>{statistics.viewCount} views</li>
+    <div className="py-2 sm:py-2 w-[90%] sm:w-72 md:w-56 lg:w-60 xl:w-72 h-auto shadow-lg rounded-lg bg-black box-border">
+      <img
+        className="rounded-lg w-[98%] md:w-full lg:w-full h-48 object-cover"
+        alt="thumbnail"
+        src={thumbnails.medium.url}
+      />
+
+      <ul className="mt-4 text-white">
+        <li className="font-bold text-sm sm:text-base">{title}</li>
+        <li className="text-xs sm:text-sm text-gray-400">{channelTitle}</li>
+        <li className="text-xs sm:text-sm text-gray-500">
+          {statistics.viewCount} views
+        </li>
       </ul>
     </div>
-  )
+  );
 };
-
-
 
 export default VideoCard;
