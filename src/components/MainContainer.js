@@ -10,7 +10,7 @@ const MainContainer = () => {
 
         <div className="w-full sm:w-4/5 md:w-3/4 lg:w-3/4 xl:w-4/5 mx-2 sm:mx-4 md:mx-6 lg:mx-8">
         <ButtonList />
-          <VideoContainer />
+        <VideoContainer />
         </div>
       </div>
     </div>

@@ -26,9 +26,8 @@ const Body = () => {
       >
         ☰ 
       </button>
-
       <div
-        className={`flex-1 w-full mx-6 sm:mx-6 md:mx-12 lg:mx-16 mt-4 lg:mt-0 transition-all duration-300 ${
+        className={`flex-1 w-full mx-6 sm:mx-6  mt-4 lg:mt-0 transition-all duration-300 ${
           isSidebarOpen ? "ml-3/4" : "ml-0" 
         }`}
       >

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { FaHome, FaVideo, FaRegListAlt, FaHistory, FaMusic, FaFilm, FaTv } from 'react-icons/fa'; 
 
 
@@ -6,10 +7,12 @@ const Sidebar = () => {
   return (
     <div className="sticky top-0 bg-black p-2 sm:w-60 md:w-72 lg:w-80 h-full overflow-y-auto">
       <ul className="my-4 space-y-3">
+        <Link to='/'>
         <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
           <FaHome className="w-6 h-6 mr-2" />
           <span className="hidden lg:block">Home</span> 
-        </li>
+        </li></Link>
+       
         <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
           <FaVideo className="w-6 h-6 mr-2" />
           <span className="hidden lg:block">Shorts</span>
