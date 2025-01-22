@@ -5,10 +5,10 @@ import { FaHome, FaVideo, FaRegListAlt, FaHistory, FaMusic, FaFilm, FaTv } from 
 
 const Sidebar = () => {
   return (
-    <div className="sticky top-0 bg-black p-2 sm:w-60 md:w-72 lg:w-80 h-full overflow-y-auto">
-      <ul className="my-4 space-y-3">
+    <div className="sticky top-0 bg-black p-2 sm:w-48 md:w-60 lg:w-72 xl:w-80 h-full overflow-y-auto">
+      <ul className="relative top-6 my-4 space-y-3">
         <Link to='/'>
-        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md">
+        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded-md sm:top-4">
           <FaHome className="w-6 h-6 mr-2" />
           <span className="hidden lg:block">Home</span> 
         </li></Link>
@@ -41,6 +41,8 @@ const Sidebar = () => {
     </div>
   );
 };
+
+
 
 
 export default Sidebar;
